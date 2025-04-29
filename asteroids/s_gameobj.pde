@@ -29,11 +29,11 @@ class gameobj {
   void show() {
   }
   
-    void wraparound() {
+    void wraparound( float radius) {
 
-    if (location.x < -20) location.x = 1020;
-    if (location.x > 1020) location.x =  -20;
-    if (location.y < -20) location.y = 820;
-    if (location.y > 820) location.y = -20;
+     if (location.x < -radius) location.x = width + radius;
+  if (location.x > width + radius) location.x = -radius;
+  if (location.y < -radius) location.y = height + radius;
+  if (location.y > height + radius) location.y = -radius;
   }
 }

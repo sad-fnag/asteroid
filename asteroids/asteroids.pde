@@ -35,6 +35,12 @@ void setup() {
   obj = new ArrayList();
 
   p1 = new spaceship();
+  
+  obj.add(new asteroid());
+  obj.add(new asteroid());
+  obj.add(new asteroid());
+  obj.add(new asteroid());
+  
   obj.add(p1);
 
   //======================================================

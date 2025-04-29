@@ -4,7 +4,7 @@ class bullet extends gameobj {
 
   bullet() {
     super(p1.location.copy(), p1.direction.copy());
-    velocity.setMag(10);
+    velocity.setMag(15);
     timer = 60;
   }
 
@@ -19,7 +19,7 @@ class bullet extends gameobj {
     location.add(velocity);
     timer--;
     if(timer == 0) lives = 0;
-    wraparound();
+    wraparound(5);
   }
 
 

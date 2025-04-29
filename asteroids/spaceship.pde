@@ -38,17 +38,31 @@ class spaceship extends gameobj {
     move();
     shoot();
     collision();
-    wraparound();
+    wraparound(20);
   }
 
 
   void move() {
     location.add(velocity);
+  
+    
+    
     if (up) velocity.add(direction);
-    if (left) direction.rotate(-radians(3));
-    if (right) direction.rotate(radians(3));
+    if (down) velocity.sub(direction);
+    
+    
+    if (!down) {
+      velocity.mult(0.97);
+    }
+  
+    
+    if (left) direction.rotate(-radians(5));
+    if (right) direction.rotate(radians(5));
     
     velocity.limit(5);
+  
+      
+    
   }
 
   void shoot() {
