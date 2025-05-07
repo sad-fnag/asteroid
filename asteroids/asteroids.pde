@@ -6,11 +6,16 @@ PFont overthere;
 int mode;
 int tsize;
 int lives;
+int score;
 
 final int intro = 0;
 final int game = 1;
 final int gameover = 2;
 final int pause = 3;
+
+int lastLives = 3;      // initial spaceship lives
+int flashTimer = 0;     // timer for flash effect
+
 
 PVector location;
 PVector velocity;
@@ -35,12 +40,13 @@ void setup() {
   obj = new ArrayList();
 
   p1 = new spaceship();
-  
+
   obj.add(new asteroid());
   obj.add(new asteroid());
   obj.add(new asteroid());
   obj.add(new asteroid());
-  
+  obj.add(new asteroid());
+
   obj.add(p1);
 
   //======================================================

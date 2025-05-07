@@ -8,10 +8,10 @@ void mouseReleased() {
     gameclicks();
   } else if (mode == gameover) {
     gameoverclicks();
+  } else if (mode == pause) {
+    pauseclicks();
   }
 }
-
-
 
 
 void keyPressed() {

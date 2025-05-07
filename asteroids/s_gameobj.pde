@@ -4,6 +4,7 @@ class gameobj {
 
   int lives;
 
+  float d;
 
   gameobj(float lx, float ly, float vx, float vy ) {
     location = new PVector (lx, ly);
@@ -29,11 +30,11 @@ class gameobj {
   void show() {
   }
   
-    void wraparound( float radius) {
+  void wraparound(float buffer) {
+  if (location.x < -buffer) location.x = width + buffer;
+  if (location.x > width + buffer) location.x = -buffer;
+  if (location.y < -buffer) location.y = height + buffer;
+  if (location.y > height + buffer) location.y = -buffer;
+}
 
-     if (location.x < -radius) location.x = width + radius;
-  if (location.x > width + radius) location.x = -radius;
-  if (location.y < -radius) location.y = height + radius;
-  if (location.y > height + radius) location.y = -radius;
-  }
 }

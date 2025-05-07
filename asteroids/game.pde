@@ -12,8 +12,31 @@ void game() {
     else
       i++;
   }
+
+  //pause
+  
+  if (dist(mouseX, mouseY, 70, 70) < 50) {
+    stroke(#B1DEDA);
+  }else{
+    stroke(0);
+  }
+    fill(255);
+    strokeWeight(5);
+
+  circle(70, 70, 100);
+  line(50, 40, 50, 100);
+  line(88, 40, 88, 100);
+  
+  
+   textSize(40);
+  fill(255);
+  text("Score " + score, width/2, 50);
+text("Lives " + p1.hp, width/2, 100);
 }
 
 void gameclicks() {
   //mode = gameover;
+  if (dist(mouseX, mouseY, 70, 70) < 50) {
+    mode = pause;
+  }
 }

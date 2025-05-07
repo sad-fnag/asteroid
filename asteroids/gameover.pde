@@ -1,9 +1,14 @@
 void gameover(){
-  background(255, 0, 0);
+  background(0);
+  textSize(70);
+ text("GAMEOVER.", 500, 400);
+ 
 }
 
 
 void gameoverclicks(){
+  
+   reset();
    mode = intro;
   
 }
