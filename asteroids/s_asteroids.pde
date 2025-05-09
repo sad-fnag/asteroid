@@ -13,7 +13,7 @@ class asteroid extends gameobj {
     super(loc.x, loc.y, 1, 1);
     velocity = PVector.random2D().mult(random(1, 3));
     lives = newLives;
-    d = lives * 30;
+    d = lives * 35;
     rspeed = random(1) < 0.5 ? random(-2, -0.5) : random(0.5, 2); // no zero spin
     angle = 0;
     shape = generateShape();

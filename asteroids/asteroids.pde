@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 
+PImage heart;
 
 PFont overthere;
 
@@ -36,7 +37,9 @@ void setup() {
   size(1000, 800);
   mode = intro;
   textAlign(CENTER, CENTER);
-
+   heart = loadImage("hardcore-heart.png");
+  heart.resize(100, 100);
+  
   obj = new ArrayList();
 
   p1 = new spaceship();
@@ -46,6 +49,9 @@ void setup() {
   obj.add(new asteroid());
   obj.add(new asteroid());
   obj.add(new asteroid());
+    obj.add(new asteroid());
+  obj.add(new asteroid());
+
 
   obj.add(p1);
 
